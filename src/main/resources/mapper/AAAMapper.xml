@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dao.AAAMapper">
+  <resultMap id="BaseResultMap" type="com.example.bean.AAABean">
+
+    <result column="A1" jdbcType="VARCHAR" property="A1" />
+	<result column="A2" jdbcType="VARCHAR" property="A2" />
+	<result column="A3" jdbcType="VARCHAR" property="A3" />
+		
+  </resultMap>
+  
+  <select id="select" resultType="HashMap"
+		parameterType="com.example.bean.AAABean">
+
+		SELECT 	[A1]
+		       ,[A2]
+		       ,[A3]
+	  	FROM [PMMS].[dbo].[AAA]
+		
+	</select>
+ 
+</mapper>
